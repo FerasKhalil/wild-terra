@@ -5,13 +5,13 @@ import CTASection from "./components/CTASection";
 import Newsletter from "./components/Newsletter";
 import petra from "../public/images/hero/petra.webp"
 import { adventures } from "./data/adventures";
-
+import Hero from "./components/Hero"
 export default function Home() {
   return (
     <div>
 
       {/* HERO */}
-      <section className="relative h-[80vh] flex items-center justify-center text-white">
+      {/* <section className="relative h-[80vh] flex items-center justify-center text-white">
         <img
           src={petra.src}
           className="absolute w-full h-full object-cover"
@@ -30,7 +30,8 @@ export default function Home() {
             Explore Trips
           </a>
         </div>
-      </section>
+      </section> */}
+      < Hero />
 
       {/* WHY US */}
       <WhyUs />
