@@ -6,7 +6,7 @@ export default function AdventureCard({ adventure }: any) {
             <img
                 src={adventure.image}
                 alt={adventure.title}
-                className="h-60 w-full object-cover"
+                className="h-100 w-full object-cover"
             />
             <div className="p-6">
                 <h3 className="text-xl text-gray-500 font-semibold mb-2">

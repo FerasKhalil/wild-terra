@@ -3,6 +3,7 @@ import Testimonials from "./components/Testimonials";
 import WhyUs from "./components/WhyUs";
 import CTASection from "./components/CTASection";
 import Newsletter from "./components/Newsletter";
+import petra from "../public/images/hero/petra.webp"
 import { adventures } from "./data/adventures";
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative h-[80vh] flex items-center justify-center text-white">
         <img
-          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+          src={petra.src}
           className="absolute w-full h-full object-cover"
         />
         <div className="relative bg-black/50 p-10 rounded-xl text-center max-w-3xl">

@@ -1,24 +1,46 @@
 export const adventures = [
     {
-      slug: "morocco-desert",
-      title: "Morocco Desert Expedition",
-      location: "Morocco",
-      duration: "7 Days",
-      price: 1200,
+      slug: "Jordan Discovery",
+      title: "Jordan Discovery",
+      location: "Amman - Wadi Rum - Aqaba - Petra",
+      duration: "8 Days",
+      price: "1200JD",
       image:
-        "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+        "/images/hero/discover_jordan.webp",
       description:
-        "Explore the Sahara desert, camel trekking, and Berber culture.",
+        "Discover Jordan",
     },
     {
-      slug: "peru-machu-picchu",
-      title: "Peru & Machu Picchu Trek",
-      location: "Peru",
-      duration: "10 Days",
-      price: 2100,
+      slug: "`Explore Jordan",
+      title: "Explore Jordan",
+      location: "Amman - Wadi Rum - Petra - Madaba",
+      duration: "8 Days",
+      price: "1200JD",
       image:
-        "https://images.unsplash.com/photo-1505678261036-a3fcc5e884ee",
+      "/images/hero/explore_jordan.webp",
       description:
-        "Hike the Inca Trail and discover ancient civilizations.",
+      "Explore Jordan",
+    },
+    {
+      slug: "`Premium Jordan",
+      title: "Premium Jordan",
+      location: "Amman - Wadi Rum - Petra - Dead Sea",
+      duration: "8 Days",
+      price: "1200JD",
+      image:
+      "/images/hero/premium_jordan.webp",
+      description:
+      "Explore Jordan",
+    },
+    {
+      slug: "`One Week in Jordan",
+      title: "One Week in Jordan",
+      location: "Amman - Wadi Rum - Petra - Mountain Nebo",
+      duration: "7 Days",
+      price: "1200JD",
+      image:
+      "/images/hero/oneweek_in_jordan.webp",
+      description:
+      "Explore Jordan",
     },
   ];
