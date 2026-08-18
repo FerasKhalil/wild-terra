@@ -1,3 +1,9 @@
+export interface ItineraryDay {
+  day: number;
+  title: string;
+  description: string;
+}
+
 export interface Adventure {
   slug: string;
   title: string;
@@ -15,6 +21,10 @@ export interface Adventure {
   nextAvailable: string;
   tags: string[];
   groupSize: string;
+  highlights: string[];
+  included: string[];
+  notIncluded: string[];
+  itinerary: ItineraryDay[];
 }
 
 export const adventures: Adventure[] = [
@@ -36,6 +46,38 @@ export const adventures: Adventure[] = [
     nextAvailable: "15 Jan 2027",
     tags: ["Explorer", "Cultural"],
     groupSize: "Max 12",
+    highlights: [
+      "Walk through the Siq to Petra's iconic Treasury",
+      "Camp under the stars in a Bedouin desert camp in Wadi Rum",
+      "Float in the mineral-rich waters of the Dead Sea",
+      "Explore the ancient Roman city of Jerash",
+      "Taste authentic Jordanian cuisine with a local family",
+      "Watch the sunset from Amman's Citadel",
+    ],
+    included: [
+      "7 nights accommodation (hotels & desert camp)",
+      "All ground transportation in an air-conditioned vehicle",
+      "English-speaking local guide throughout",
+      "Daily breakfast & 3 dinners",
+      "Entrance fees to all listed sites",
+      "Airport transfers",
+    ],
+    notIncluded: [
+      "International flights",
+      "Travel insurance",
+      "Lunches & tips",
+      "Personal expenses",
+    ],
+    itinerary: [
+      { day: 1, title: "Arrival in Amman", description: "Welcome to Jordan! Transfer from Queen Alia International Airport to your hotel in Amman. Evening welcome dinner with your group and guide." },
+      { day: 2, title: "Amman City Tour & Jerash", description: "Morning exploration of Amman's Citadel, Roman Theatre, and bustling downtown. Afternoon excursion to the remarkably preserved Roman city of Jerash." },
+      { day: 3, title: "Dead Sea & Mount Nebo", description: "Drive to the Dead Sea, the lowest point on Earth. Float in the buoyant waters and enjoy the mud baths. Continue to Mount Nebo for panoramic views of the Jordan Valley." },
+      { day: 4, title: "King's Highway to Petra", description: "Travel the ancient King's Highway, stopping at Madaba's Byzantine mosaics and the crusader castle of Kerak. Arrive in Wadi Musa, the gateway to Petra." },
+      { day: 5, title: "Petra — The Rose City", description: "Full day exploring Petra. Walk the Siq, visit the Treasury, Royal Tombs, Colonnaded Street, and the Monastery. Optional candlelit Petra tour in the evening." },
+      { day: 6, title: "Wadi Rum Desert", description: "Transfer to Wadi Rum, the Valley of the Moon. 4x4 jeep tour through sandstone canyons, natural bridges, and ancient inscriptions. Overnight in a Bedouin camp." },
+      { day: 7, title: "Aqaba & Return to Amman", description: "Morning in Aqaba for snorkeling or leisure time at the Red Sea. Afternoon drive back to Amman for farewell dinner." },
+      { day: 8, title: "Departure", description: "Transfer to Queen Alia International Airport for your departure flight." },
+    ],
   },
   {
     slug: "explore-jordan",
@@ -55,6 +97,39 @@ export const adventures: Adventure[] = [
     nextAvailable: "12 Jan 2027",
     tags: ["Explorer", "Walking & trekking"],
     groupSize: "Max 12",
+    highlights: [
+      "Hike through the stunning Dana Biosphere Reserve",
+      "Sleep under the stars in a luxury Wadi Rum desert camp",
+      "Explore Petra's lesser-known back trails with a local guide",
+      "Float in the Dead Sea and visit Biblical sites",
+      "Experience a traditional Bedouin cooking class",
+      "Visit the ancient mosaics of Madaba",
+    ],
+    included: [
+      "9 nights accommodation (hotels, eco-lodge & desert camp)",
+      "All ground transportation",
+      "English-speaking local guide",
+      "Daily breakfast, 4 lunches & 4 dinners",
+      "All entrance fees",
+      "Airport transfers",
+    ],
+    notIncluded: [
+      "International flights",
+      "Travel insurance",
+      "Tips & personal expenses",
+    ],
+    itinerary: [
+      { day: 1, title: "Welcome to Amman", description: "Airport pickup and hotel check-in. Evening walking tour of downtown Amman's Rainbow Street." },
+      { day: 2, title: "Amman & Jerash", description: "Explore the Citadel, Roman Theatre, and the ancient Greco-Roman city of Jerash." },
+      { day: 3, title: "Madaba & Dead Sea", description: "Visit Madaba's 6th-century mosaic map and Mount Nebo. Afternoon floating in the Dead Sea." },
+      { day: 4, title: "King's Highway to Dana", description: "Scenic drive along the King's Highway. Visit Kerak Castle. Arrive at Dana Biosphere Reserve." },
+      { day: 5, title: "Dana Nature Reserve Trek", description: "Full-day guided hike through Dana's dramatic sandstone canyons and diverse ecosystems." },
+      { day: 6, title: "Dana to Petra", description: "Morning nature walk in Dana. Transfer to Wadi Musa with afternoon free time." },
+      { day: 7, title: "Petra Full Day", description: "Full-day exploration of Petra — the Siq, Treasury, Royal Tombs, High Place of Sacrifice, and Monastery." },
+      { day: 8, title: "Petra by Night", description: "Optional Petra by Night experience. Free morning for shopping or revisiting sites." },
+      { day: 9, title: "Wadi Rum Adventure", description: "4x4 desert safari, camel ride, and Bedouin camp overnight with traditional dinner under the stars." },
+      { day: 10, title: "Departure", description: "Morning desert sunrise. Transfer to Amman airport for departure." },
+    ],
   },
   {
     slug: "premium-jordan",
@@ -74,6 +149,40 @@ export const adventures: Adventure[] = [
     nextAvailable: "10 Jan 2027",
     tags: ["Explorer", "Premium"],
     groupSize: "Max 8",
+    highlights: [
+      "Stay in a luxury bubble tent in Wadi Rum",
+      "Private after-hours guided tour of Petra",
+      "5-star Dead Sea resort with private beach",
+      "Private chef dinner in a Bedouin setting",
+      "Helicopter or hot air balloon option over Wadi Rum",
+      "Personal travel concierge throughout the trip",
+    ],
+    included: [
+      "8 nights in 5-star and luxury boutique hotels",
+      "Private air-conditioned vehicle with driver",
+      "Private English-speaking guide",
+      "All meals (breakfast, lunch & dinner)",
+      "All entrance fees and exclusive experiences",
+      "Airport VIP transfers",
+      "Complimentary welcome hamper",
+    ],
+    notIncluded: [
+      "International flights",
+      "Travel insurance",
+      "Optional balloon/helicopter excursion",
+      "Tips",
+    ],
+    itinerary: [
+      { day: 1, title: "VIP Arrival in Amman", description: "Airport meet-and-greet with private transfer to the 5-star Fairmont Amman. Welcome cocktail reception." },
+      { day: 2, title: "Private Amman & Jerash Tour", description: "Private guided tour of Amman's highlights and Jerash with an archaeological expert." },
+      { day: 3, title: "Dead Sea Luxury", description: "Private transfer to the Kempinski Hotel Dead Sea. Afternoon spa treatment and private beach access." },
+      { day: 4, title: "Madaba & Drive to Petra", description: "Private tour of Madaba and scenic drive to Petra. Overnight at the Mövenpick Resort Petra." },
+      { day: 5, title: "Private Petra Experience", description: "Exclusive early-morning private tour of Petra before the crowds arrive. Picnic lunch inside the site." },
+      { day: 6, title: "Petra by Candlelight", description: "Free morning in Petra. Evening Petra by Candlelight experience. Dinner at the Mövenpick." },
+      { day: 7, title: "Luxury Wadi Rum", description: "Transfer to Memories Aicha Luxury Camp in Wadi Rum. 4x4 tour, sunset camel ride, and gourmet desert dinner." },
+      { day: 8, title: "Wadi Rum Morning & Return", description: "Sunrise hot air balloon ride (optional). Return to Amman for farewell dinner at a private restaurant." },
+      { day: 9, title: "Departure", description: "Private VIP airport transfer for departure." },
+    ],
   },
   {
     slug: "one-week-in-jordan",
@@ -93,6 +202,36 @@ export const adventures: Adventure[] = [
     nextAvailable: "18 Jan 2027",
     tags: ["Explorer"],
     groupSize: "Max 16",
+    highlights: [
+      "See all of Jordan's top highlights in just one week",
+      "Comfortable hotels throughout — no camping required",
+      "Visit Petra, Wadi Rum, Dead Sea, and Amman",
+      "Expert local guide who brings history to life",
+      "Balanced pace with free time for personal exploration",
+      "Perfect for first-time visitors to the Middle East",
+    ],
+    included: [
+      "6 nights comfortable hotel accommodation",
+      "All ground transportation",
+      "English-speaking guide",
+      "Daily breakfast & 3 dinners",
+      "All entrance fees",
+      "Airport transfers",
+    ],
+    notIncluded: [
+      "International flights",
+      "Travel insurance",
+      "Lunches & tips",
+    ],
+    itinerary: [
+      { day: 1, title: "Arrival in Amman", description: "Airport transfer and hotel check-in. Free evening to explore Amman." },
+      { day: 2, title: "Amman & Jerash", description: "City tour of Amman including Citadel and Roman Theatre. Afternoon visit to Jerash." },
+      { day: 3, title: "Dead Sea & Mount Nebo", description: "Day trip to the Dead Sea for floating and swimming. Visit Mount Nebo and Madaba." },
+      { day: 4, title: "To Petra via King's Highway", description: "Scenic drive along the King's Highway with stops at Kerak Castle. Arrive in Wadi Musa." },
+      { day: 5, title: "Petra Exploration", description: "Full day in Petra visiting the Siq, Treasury, Royal Tombs, and Monastery." },
+      { day: 6, title: "Wadi Rum Desert", description: "4x4 jeep tour through Wadi Rum. Bedouin lunch and campfire evening." },
+      { day: 7, title: "Departure", description: "Morning departure transfer to Amman airport." },
+    ],
   },
   {
     slug: "jordan-on-a-budget",
@@ -112,6 +251,36 @@ export const adventures: Adventure[] = [
     nextAvailable: "20 Jan 2027",
     tags: ["18 to 35s", "Budget"],
     groupSize: "Max 16",
+    highlights: [
+      "The most affordable way to see Jordan's highlights",
+      "Meet fellow travelers in a fun social group setting",
+      "Sleep in a Bedouin camp in Wadi Rum",
+      "Walk through the Siq to Petra's Treasury",
+      "Authentic street food experiences in Amman",
+      "Ideal for solo travelers and first-time visitors",
+    ],
+    included: [
+      "5 nights accommodation (hostels & desert camp)",
+      "All ground transportation",
+      "English-speaking guide",
+      "Daily breakfast & 2 dinners",
+      "Petra entrance fee (2-day pass)",
+      "Wadi Rum jeep tour",
+    ],
+    notIncluded: [
+      "International flights",
+      "Travel insurance",
+      "Other meals & tips",
+      "Optional activities",
+    ],
+    itinerary: [
+      { day: 1, title: "Welcome to Amman", description: "Airport transfer to hostel. Evening street food tour of downtown Amman." },
+      { day: 2, title: "Amman Exploration", description: "Visit the Citadel, Roman Theatre, and Rainbow Street. Free afternoon." },
+      { day: 3, title: "Petra Day 1", description: "Drive to Wadi Musa. Afternoon entry to Petra for the Siq and Treasury at sunset." },
+      { day: 4, title: "Petra Full Day", description: "Full day exploring Petra's major sites — Monastery, Royal Tombs, and more." },
+      { day: 5, title: "Wadi Rum Desert", description: "Transfer to Wadi Rum. Jeep safari and overnight in a Bedouin camp." },
+      { day: 6, title: "Departure", description: "Morning desert sunrise. Transfer back to Amman for departure." },
+    ],
   },
   {
     slug: "premium-jordan-and-petra",
@@ -131,6 +300,42 @@ export const adventures: Adventure[] = [
     nextAvailable: "08 Feb 2027",
     tags: ["Explorer", "Premium"],
     groupSize: "Max 8",
+    highlights: [
+      "The most comprehensive Jordan trip available",
+      "Snorkel in the Red Sea at Aqaba",
+      "Visit Ajloun Castle and Jerash with a private guide",
+      "Luxury bubble tent experience in Wadi Rum",
+      "Private Petra tour with archaeological expert",
+      "Spa day at the Dead Sea",
+    ],
+    included: [
+      "10 nights in luxury hotels and boutique properties",
+      "Private vehicle and driver throughout",
+      "Private English-speaking guide",
+      "All meals included",
+      "All entrance fees and activities",
+      "Snorkeling equipment in Aqaba",
+      "VIP airport transfers",
+    ],
+    notIncluded: [
+      "International flights",
+      "Travel insurance",
+      "Diving courses (available in Aqaba)",
+      "Tips",
+    ],
+    itinerary: [
+      { day: 1, title: "VIP Arrival", description: "Private airport transfer to the St. Regis Amman. Welcome dinner at a rooftop restaurant." },
+      { day: 2, title: "Amman Private Tour", description: "Private guided exploration of Amman's highlights with a local historian." },
+      { day: 3, title: "Jerash & Ajloun", description: "Full-day private tour of Jerash and Ajloun Castle with a local archaeologist." },
+      { day: 4, title: "Dead Sea & Madaba", description: "Private transfer to the Dead Sea. Afternoon at the Kempinski spa." },
+      { day: 5, title: "King's Highway to Petra", description: "Scenic private drive with stops at Kerak and Dana. Overnight at Mövenpick Petra." },
+      { day: 6, title: "Private Petra Tour", description: "Exclusive early-access private tour of Petra with an expert guide." },
+      { day: 7, title: "Petra by Night", description: "Morning at leisure. Evening Petra by Candlelight experience." },
+      { day: 8, title: "Wadi Rum Luxury", description: "Transfer to Memories Aicha Luxury Camp. Sunset jeep tour and gourmet dinner." },
+      { day: 9, title: "Wadi Rum to Aqaba", description: "Morning desert activities. Transfer to Aqaba's Berenice Beach Club." },
+      { day: 10, title: "Aqaba Leisure", description: "Snorkeling trip to the coral reefs. Free afternoon. Farewell dinner." },
+      { day: 11, title: "Departure", description: "Private transfer to Aqaba airport or drive to Amman for departure." },
+    ],
   },
   {
     slug: "jordan-walking-and-trekking",
@@ -150,6 +355,39 @@ export const adventures: Adventure[] = [
     nextAvailable: "05 Mar 2027",
     tags: ["Walking & trekking", "Multi-active"],
     groupSize: "Max 12",
+    highlights: [
+      "Hike the ancient Nabataean High Trail to Petra",
+      "Trek through Dana Biosphere Reserve's dramatic canyons",
+      "Walk through Little Petra's painted caves",
+      "Multi-day Wadi Rum desert trek",
+      "Camp in Bedouin tents deep in the desert",
+      "Expert trekking guide with wilderness first aid",
+    ],
+    included: [
+      "8 nights accommodation (eco-lodge, hotel & desert camps)",
+      "All ground transportation",
+      "Expert trekking guide",
+      "All meals during trekking days",
+      "Camping equipment",
+      "All entrance fees",
+    ],
+    notIncluded: [
+      "International flights",
+      "Travel insurance",
+      "Personal trekking gear",
+      "Tips",
+    ],
+    itinerary: [
+      { day: 1, title: "Amman to Dana", description: "Transfer from Amman to Dana village. Afternoon orientation walk in Dana." },
+      { day: 2, title: "Dana to Feynan", description: "Full-day trek through Dana's sandstone canyons to Feynan Ecolodge (14km)." },
+      { day: 3, title: "Feynan to Petra Area", description: "Trek through Wadi Araba landscapes. Transfer to Wadi Musa." },
+      { day: 4, title: "Little Petra & Nabataean Trail", description: "Hike to Little Petra and walk the Nabataean trade route with stunning views." },
+      { day: 5, title: "Petra Full Day Trek", description: "Trek through Petra visiting the Siq, Treasury, High Place of Sacrifice, and Monastery." },
+      { day: 6, title: "Rest Day in Petra", description: "Free day to revisit favorite spots or relax. Optional candlelit tour." },
+      { day: 7, title: "Trek to Wadi Rum", description: "Transfer to Wadi Rum. Afternoon desert trek through Lawrence's Valley." },
+      { day: 8, title: "Wadi Rum Desert Trek", description: "Full-day guided trek through Wadi Rum's canyons, bridges, and sand dunes. Camp overnight." },
+      { day: 9, title: "Departure", description: "Sunrise in the desert. Transfer to Amman airport." },
+    ],
   },
   {
     slug: "jordan-family-adventure",
@@ -169,6 +407,38 @@ export const adventures: Adventure[] = [
     nextAvailable: "14 Jan 2027",
     tags: ["Family", "Explorer"],
     groupSize: "Max 12",
+    highlights: [
+      "Family-friendly pace with shorter driving days",
+      "Kids ride camels and sleep in a desert camp",
+      "Interactive Jordanian cooking class for the family",
+      "Float together in the Dead Sea",
+      "Treasure hunt-style tour of Petra designed for kids",
+      "Flexible itinerary to suit your family's needs",
+    ],
+    included: [
+      "7 nights family-friendly accommodation",
+      "Private family vehicle with driver",
+      "Family-friendly English-speaking guide",
+      "Daily breakfast & 4 dinners",
+      "All entrance fees and family activities",
+      "Airport transfers",
+    ],
+    notIncluded: [
+      "International flights",
+      "Travel insurance",
+      "Lunches & tips",
+      "Optional activities",
+    ],
+    itinerary: [
+      { day: 1, title: "Welcome to Jordan", description: "Airport transfer to family hotel in Amman. Welcome dinner at a kid-friendly restaurant." },
+      { day: 2, title: "Amman Family Explore", description: "Fun interactive tour of Amman's Citadel, Roman Theatre, and Rainbow Street with a family guide." },
+      { day: 3, title: "Dead Sea Family Fun", description: "Family float in the Dead Sea, mud bath fun, and pool time at the resort." },
+      { day: 4, title: "Madaba & Drive to Petra", description: "Visit Madaba's mosaics with a scavenger hunt for kids. Scenic drive to Wadi Musa." },
+      { day: 5, title: "Petra with Kids", description: "Kid-friendly Petra tour — treasure hunt through the Siq, explore the Treasury, and discover cave tombs." },
+      { day: 6, title: "Wadi Rum Family Camp", description: "Transfer to Wadi Rum. Short jeep tour, camel ride, and family campfire dinner under the stars." },
+      { day: 7, title: "Desert Morning & Return", description: "Watch the sunrise in Wadi Rum. Return to Amman with a stop for shopping." },
+      { day: 8, title: "Departure", description: "Airport transfer for departure flight." },
+    ],
   },
 ];
 

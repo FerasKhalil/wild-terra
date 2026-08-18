@@ -101,16 +101,16 @@ export default function AdventuresPageClient() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-10">
       {/* Breadcrumbs */}
-      <nav className="flex items-center gap-2 text-sm text-white-500 mb-6">
+      <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6">
         <Link href="/" className="hover:text-green-700 transition">
           Home
         </Link>
         <span>/</span>
-        <span className="text-white-800 font-medium">Adventures</span>
+        <span className="text-gray-800 font-medium">Adventures</span>
         {keyword && (
           <>
             <span>/</span>
-            <span className="text-white-800 font-medium">
+            <span className="text-gray-800 font-medium">
               Search: &ldquo;{keyword}&rdquo;
             </span>
           </>
@@ -119,7 +119,7 @@ export default function AdventuresPageClient() {
 
       {/* Page Header */}
       <div className="mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold text-white-900 mb-2">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
           {keyword ? `Results for "${keyword}"` : "Our Adventures"}
         </h1>
         <p className="text-gray-600">
