@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const TO_EMAIL = "x.firashasan@gmail.com";
 
 export async function POST(request: Request) {
@@ -24,6 +22,8 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     const { data, error } = await resend.emails.send({
       from: "WildTerra Contact Form <onboarding@resend.dev>",
