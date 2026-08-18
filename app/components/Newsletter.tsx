@@ -5,7 +5,7 @@ export default function Newsletter() {
                 Join Our Community
             </h2>
 
-            <div className="max-w-md mx-auto flex gap-4c text-black">
+            <div className="max-w-md mx-auto flex gap-4 text-black">
                 <input
                     type="email"
                     placeholder="Enter your email"
